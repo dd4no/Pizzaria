@@ -1,0 +1,32 @@
+﻿@page
+@model Pizzaria.Pages.CustomPizzaModel
+@{
+}
+
+<div class="text-center">
+    <h1>Design Your Own Pie</h1>
+    </div>
+<div class="text-left container">
+    <form class="mx-auto mt-5 mb-5 px-5 pt-5 pb-5 rounded-5 bg-light col-4" method="post">
+        <div class="text-center">
+            <input type="text" asp-for="Pizza.PizzaName" placeholder="Name your pie"/><br /><br />
+        </div>
+
+        <input type="checkbox" asp-for="Pizza.TomatoSauce" /> Tomato Sauce <br />
+        <input type="checkbox" asp-for="Pizza.Cheese" /> Cheese <br />
+        <input type="checkbox" asp-for="Pizza.Peperoni" /> Peperoni <br />
+        <input type="checkbox" asp-for="Pizza.Sausage" /> Sausage <br />
+        <input type="checkbox" asp-for="Pizza.Beef" /> Beef <br />
+        <input type="checkbox" asp-for="Pizza.Ham" /> Ham <br />
+        <input type="checkbox" asp-for="Pizza.Shrimp" /> Shrimp <br />
+        <input type="checkbox" asp-for="Pizza.GreenPeppers" /> Green Peppers <br />
+        <input type="checkbox" asp-for="Pizza.Mushrooms" /> Mushrooms <br />
+        <input type="checkbox" asp-for="Pizza.BlackOlives" /> Black Olives <br />
+        <input type="checkbox" asp-for="Pizza.Onion" /> Onion <br />
+        <input type="checkbox" asp-for="Pizza.Pinapple" /> Pinapple <br /><br />
+        
+        <div class="text-center">
+            <button class="btn btn-primary mt-1" type="submit">Place Order</button>
+        </div>
+    </form>
+</div>

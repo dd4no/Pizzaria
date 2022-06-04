@@ -1,0 +1,40 @@
+﻿@page
+@model Pizzaria.Pages.PizzaModel
+@{
+}
+
+<div class="text-center">
+
+     <div class="mainText">
+        <h1 class="display-4 text-black">Our Pies</h1>
+        <h4>Choose one of our classics or create your own!</h4>
+        <p class="smallText"><i>Only one pizza per order</i></p>
+    </div>
+    <div class="container">
+        <div class="row">
+                @foreach(var pizza in Model.PizzaDB)
+                {
+                var imagePath = "~/images/Pizzas/" + (@pizza.ImageTitle + ".png");
+                <div class="col-4 mb-5">
+                        
+                        <a class="pizza-img" asp-area="" asp-page="Checkout" asp-route-ImageTitle="@pizza.ImageTitle" asp-route-PizzaPrice="@pizza.FinalPrice"><img src=@imagePath class="w-100" asp-append-version="true" /></a><br />
+                    </div>
+                }
+                            <div class="col-12 mb-5 mt-5">
+                <div class="w-100 row customDiv">
+                    <div class="col-4">
+                        <img src="~/images/Pizzas/Create.png" class="mt-5 mb-5 w-50" />
+                    </div>
+                    <div class="col-8 align-items-center">
+                        <div class="customDivText">
+                            <h3 style="text-align:left;">Create your own Pie</h3>
+                            <p style="text-align:left;">Customize your toppings</p>
+                            <a class="btn btn-primary" style="float: left" asp-area="" asp-page="CustomPizza">Design Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
